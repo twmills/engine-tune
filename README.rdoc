@@ -78,4 +78,4 @@ Convenience methods to convert between metric and English units are provided as 
 
 == Copyright
 
-Copyright (c) 2010 Guts & Bolts LLC. See LICENSE for details.
+Copyright (c) 2012 twmills LLC. See LICENSE for details.
