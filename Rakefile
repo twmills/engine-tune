@@ -7,9 +7,9 @@ begin
     gem.name = "engine-tune"
     gem.summary = "Determine how well your engine will run under certain meteorological and geological conditions."
     gem.description = "Determine how well your engine will run under certain meteorological and geological conditions."
-    gem.email = "theo@gutsbolts.com"
-    gem.homepage = "http://github.com/gutsbolts/engine-tune"
-    gem.authors = ["Theodore Mills"]
+    gem.email = "twmills@twmills.com"
+    gem.homepage = "http://github.com/twmills/engine-tune"
+    gem.authors = ["Theo Mills"]
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
