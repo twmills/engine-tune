@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = "engine-tune"
-  s.version = "0.5.1"
+  s.version = "0.5.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Theodore Mills"]
+  s.authors = ["Theo Mills"]
   s.date = "2012-03-30"
   s.description = "Determine how well your engine will run under certain meteorological and geological conditions."
-  s.email = "theo@gutsbolts.com"
+  s.email = "twmills@twmills.com"
   s.extra_rdoc_files = [
     "LICENSE",
     "README.rdoc"
@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
     "test/test_engine_tune.rb",
     "test/test_suite.rb"
   ]
-  s.homepage = "http://github.com/gutsbolts/engine-tune"
+  s.homepage = "http://github.com/twmills/engine-tune"
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.15"
   s.summary = "Determine how well your engine will run under certain meteorological and geological conditions."
