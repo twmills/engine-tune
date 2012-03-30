@@ -1,0 +1,81 @@
+= EngineTune
+
+Interested in determining how well your engine will run under certain meteorological and geological conditions?
+
+This is the gem for you! (And I am sure there are a lot of you out there.)
+
+EngineTune returns the following calculations when supplied with altitude, altimeter (barometric pressure), temperature and dew point:
+
+* AE Relative Horsepower
+* Dyno Correction Factor
+* Air Density
+* Density Altitude
+* ICAO Relative Air Density
+* Virtual Temperature
+* Absolute Air Pressure
+* Vapor Pressure
+* Relative Humidity
+
+The calculations in this gem are modeled after  Richard Shelquist's Engine Tuner's Calculator, but have been re-factored to be more ruby-like. I urge you to read his technical articles on Density Altitude and Corrected Horsepower for detailed explanations of these concepts.
+
+http://wahiduddin.net/calc/calc_hp_dp.htm
+
+== Standard Usage
+
+<i>Note that all observations must be supplied using the metric system of measurement.</i>
+
+  observations = Hash.new
+  observations[:temperature] = 32.0 # Celsius
+  observations[:dew_point] = 22.0 # Celsius
+  observations[:altitude] = 149.0 # Meters
+  observations[:altimeter] = 1013.4 # Millibars
+
+  calculations = EngineTune.calculate(observations)
+
+  calculations.relative_horsepower
+    #=> 96.2 (as percentage)
+
+  calculations.density_altitude
+    #=> 876 (as meters)
+
+
+Calculations are returned in metric units, but if you prefer your calculations using the English system of measurement, do this:
+
+  calculations.metric = false
+
+  calculations.density_altitude
+    #=> 2874 (as feet)
+
+And if you forget what system of measurement your calculations object is using, just ask it:
+
+  calculations.metric = false
+
+  calculations.metric?
+    #=> false
+
+  calculations.english?
+    #=> true
+
+== The Calculator
+
+You can also bypass the calculations object and directly use the calculator:
+
+  temperature = 32.0 # Celsius
+  dew_point = 22.0 # Celsius
+  altitude = 149.0 # Meters
+  altimeter = 1013.4 # Millibars
+
+  EngineTune::Calculator.relative_horsepower(altimeter, altitude, dew_point, temperature)
+    #=> 96.2 (as percentage)
+
+Convenience methods to convert between metric and English units are provided as well:
+
+  EngineTune::Calculator.meters_to_feet 1054
+    #=> 3458.0052546
+
+  EngineTune::Calculator.inches_to_millibars 1223
+    #=> 41415.3694298
+
+== Copyright
+
+Copyright (c) 2010 Guts & Bolts LLC. See LICENSE for details.
