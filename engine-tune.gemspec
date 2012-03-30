@@ -8,10 +8,10 @@ Gem::Specification.new do |s|
   s.version = "0.4.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Theodore Mills"]
+  s.authors = ["Theo Mills"]
   s.date = %q{2010-07-07}
   s.description = %q{Determine how well your engine will run under certain meteorological and geological conditions.}
-  s.email = %q{theo@gutsbolts.com}
+  s.email = %q{twmills@twmills.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
      "test/test_engine_tune.rb",
      "test/test_suite.rb"
   ]
-  s.homepage = %q{http://github.com/gutsbolts/engine-tune}
+  s.homepage = %q{http://github.com/twmills/engine-tune}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
